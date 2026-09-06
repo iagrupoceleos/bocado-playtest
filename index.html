@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<!-- Recibo: portada GENERADA por tools/componer_landing.py desde game/build_info.json. NO se edita a mano (GATE 48 la caza); el prefijo «Recibo» es lo que lee arsenal_uso.es_recibo (4EN). -->
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>BOCADO — jugar</title>
+<meta name="description" content="BOCADO, un juego idle de cocina. Juega en el navegador o instalalo en Android.">
+<meta name="theme-color" content="#F7E8CF">
+<link rel="icon" href="icono.png">
+<link rel="apple-touch-icon" href="icono.png">
+<meta property="og:title" content="BOCADO — jugar">
+<meta property="og:description" content="Juego idle de cocina. En el navegador o en Android.">
+<meta property="og:type" content="website">
+<style>
+  :root {
+    --crema: #F7E8CF; --panel: #FBF3E4; --borde: #D2AE80;
+    --ambar: #F6C453; --ambar-borde: #D1993F; --texto: #3D2B1F;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; padding: 24px 16px calc(24px + env(safe-area-inset-bottom));
+    background: var(--crema); color: var(--texto);
+    font-family: "Nunito", -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+    font-weight: 500; line-height: 1.55;
+    display: flex; flex-direction: column; align-items: center; min-height: 100vh;
+  }
+  main { width: 100%; max-width: 440px; }
+  .tarjeta {
+    background: var(--panel); border: 2px solid var(--borde); border-radius: 20px;
+    padding: 28px 24px; box-shadow: 0 6px 0 rgba(61, 43, 31, .10);
+  }
+  .icono {
+    display: block; width: 108px; height: 108px; margin: 0 auto 14px;
+    border-radius: 24px; border: 2px solid var(--borde); image-rendering: auto;
+  }
+  h1 {
+    font-size: 2.1rem; font-weight: 800; letter-spacing: .02em;
+    margin: 0 0 4px; text-align: center;
+  }
+  .lema { text-align: center; margin: 0 0 22px; opacity: .78; font-size: 1rem; }
+  a.boton {
+    display: block; text-align: center; text-decoration: none; color: var(--texto);
+    font-weight: 800; font-size: 1.1rem; padding: 17px 20px; margin-bottom: 12px;
+    background: var(--ambar); border: 2px solid var(--ambar-borde); border-radius: 14px;
+    box-shadow: 0 4px 0 var(--ambar-borde);
+    transition: transform .06s ease, box-shadow .06s ease;
+  }
+  a.boton:active { transform: translateY(3px); box-shadow: 0 1px 0 var(--ambar-borde); }
+  a.boton.segundo {
+    background: var(--panel); border-color: var(--borde); box-shadow: 0 4px 0 var(--borde);
+  }
+  a.boton.segundo:active { box-shadow: 0 1px 0 var(--borde); }
+  .boton small { display: block; font-weight: 500; font-size: .8rem; opacity: .7; margin-top: 2px; }
+  .nota {
+    font-size: .85rem; opacity: .75; margin: 18px 0 0; padding-top: 16px;
+    border-top: 1px dashed var(--borde);
+  }
+  .nota p { margin: 0 0 8px; }
+  .sello {
+    font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: .78rem;
+    text-align: center; opacity: .6; margin-top: 18px;
+  }
+  footer { font-size: .8rem; opacity: .6; margin-top: 20px; text-align: center; }
+  footer a { color: inherit; }
+</style>
+</head>
+<body>
+<main>
+  <div class="tarjeta">
+    <img class="icono" src="icono.png" alt="BOCADO">
+    <h1>BOCADO</h1>
+    <p class="lema">Un puesto de comida que no para de crecer.</p>
+
+    <a class="boton" href="juego/">Jugar en el navegador
+      <small>Funciona en móvil y en escritorio</small></a>
+
+    <a class="boton segundo" href="https://github.com/iagrupoceleos/bocado-playtest/releases/latest/download/bocado.apk">Descargar para Android
+      <small>APK firmado &middot; ~41 MB</small></a>
+
+    <div class="nota">
+      <p><strong>En el navegador:</strong> la partida se guarda en el propio navegador. Si borras
+      sus datos o entras de incógnito, empiezas de cero.</p>
+      <p><strong>En Android:</strong> al ser una descarga directa, el teléfono pedirá permiso para
+      instalar desde esta fuente. El juego no pide ni un permiso del sistema.</p>
+      <p>La partida del navegador y la del teléfono son <strong>independientes</strong>: no hay
+      cuenta ni sincronización.</p>
+    </div>
+
+    <p class="sello">versión 0.5.0 &middot; 7f6560dd5e66</p>
+  </div>
+  <footer>
+    <a href="https://iagrupoceleos.github.io/bocado-privacidad/">Política de privacidad</a>
+  </footer>
+</main>
+</body>
+</html>
